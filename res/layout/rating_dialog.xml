@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/layout_root"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:padding="10dp"
+              android:gravity="center"
+              >
+    <TextView 
+    		  android:id="@+id/text1"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:textColor="#FFF"
+              android:text="Caption Video's Quality"
+              android:layout_weight="1"
+              />
+	<RatingBar
+				android:id="@+id/ratVideo"
+				style="?android:attr/ratingBarStyleIndicator"
+				android:isIndicator="false"
+				android:layout_height="60dip"
+				android:layout_width="wrap_content"
+				android:numStars="5"
+				android:stepSize="1"
+				android:layout_gravity="center"
+				android:layout_weight="0"
+			/>	
+    <TextView android:id="@+id/text2"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:textColor="#FFF"
+              android:text="Caption Video's Channel Quality"
+              android:layout_weight="1"
+              />
+	<RatingBar
+				android:id="@+id/ratChannel"
+				style="?android:attr/ratingBarStyleIndicator"
+				android:isIndicator="false"
+				android:layout_height="60dip"
+				android:layout_width="wrap_content"
+				android:numStars="5"
+				android:stepSize="1"
+				android:layout_gravity="center"
+				android:layout_weight="0"
+			/>
+	<Button
+				android:id="@+id/btnReview"
+				android:paddingTop="20dip"
+				android:layout_width="wrap_content"
+              	android:layout_height="wrap_content"
+              	android:text="Write the Review"
+			/>
+</LinearLayout>

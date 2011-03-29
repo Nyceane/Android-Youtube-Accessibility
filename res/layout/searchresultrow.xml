@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+	The MIT License
+	
+	Copyright (c) 2010 Peter Ma
+	
+	Permission is hereby granted, free of charge, to any person obtaining a copy
+	of this software and associated documentation files (the "Software"), to deal
+	in the Software without restriction, including without limitation the rights
+	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+	copies of the Software, and to permit persons to whom the Software is
+	furnished to do so, subject to the following conditions:
+	
+	The above copyright notice and this permission notice shall be included in
+	all copies or substantial portions of the Software.
+	
+	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+	THE SOFTWARE.
+-->
+<LinearLayout
+	android:layout_height="wrap_content"
+	android:layout_width="fill_parent"
+	android:background="@android:color/transparent"
+	android:orientation="vertical"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/row"
+>
+	<LinearLayout
+		android:background="@android:color/transparent"
+		android:layout_height="wrap_content"
+		android:layout_width="fill_parent"
+		android:layout_weight="1"
+		android:padding="5dip"
+		style="@style/SearchResult"
+	>
+	
+		<!-- image icon -->
+	
+		<com.tedx.utility.RemoteImageView
+			android:id="@android:id/icon"
+			android:layout_alignParentBottom="true"
+			android:layout_alignParentTop="true"
+			android:layout_height="50dip"
+			android:layout_marginRight="5dip"
+			android:layout_width="50dip"
+			android:layout_weight="0"
+		/>
+		
+		<!-- profile name -->
+		<LinearLayout
+			android:background="@android:color/transparent"
+			android:layout_height="wrap_content"
+			android:layout_width="fill_parent"
+			android:layout_weight="1"
+			android:padding="5dip"
+			style="@style/SearchResult"
+		>
+			<TextView
+				android:id="@android:id/text1"
+				android:ellipsize="marquee"
+				android:gravity="center_vertical"
+				android:layout_alignParentRight="true"
+				android:layout_alignParentTop="true"
+				android:layout_alignWithParentIfMissing="true"
+				style="@style/SearchresultTitle" 
+			/>
+			
+			<TextView
+				android:id="@android:id/text2"
+				android:ellipsize="marquee"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content" 
+				android:layout_toRightOf="@android:id/icon"
+				android:singleLine="true"
+				android:textColor="#999999"
+				android:textSize="10sp"
+				android:textStyle="normal"
+				style="@style/SearchresultDescription"
+			/>
+		</LinearLayout>
+				
+		<ImageButton
+			android:background="@android:color/transparent"
+			android:id="@+id/btnShare"
+			android:layout_weight="0"		
+			android:layout_height="50dip"
+			android:layout_marginRight="5dip"
+			android:layout_width="50dip"
+			android:src="@android:drawable/ic_menu_share"
+			android:contentDescription="Share Video"
+			/>
+			
+		<ImageButton
+			android:background="@android:color/transparent"
+			android:id="@+id/btnRating"
+			android:layout_weight="0"		
+			android:layout_height="50dip"
+			android:layout_marginRight="5dip"
+			android:layout_width="50dip"
+			android:src="@android:drawable/btn_star_big_off"
+			android:contentDescription="Rate Video"
+		/>
+	</LinearLayout>
+</LinearLayout>
